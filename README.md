@@ -14,7 +14,7 @@
 - ⏪ **History system** with smart memory management
 - 🛡️ **File size protection** prevents loading huge files
 
-## Installation & Usage
+## Usage
 ```bash
 python codix.py [filename]
 ```
