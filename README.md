@@ -40,6 +40,10 @@ python codix.py [filename]
 
 ![img.png](resources/img_3.png)
 
+![img.png](resources/img_4.png)
+
+![img.png](resources/img_5.png)
+
 ## Video
 
 [video.mp4](resources/video.mp4)
