@@ -479,7 +479,20 @@ class NanoEditor:
 
 def main():
     """Entry point"""
-    if len(sys.argv) > 1:
+    if "-r" in sys.argv and len(sys.argv) >= 3:
+        # We find the index -r and take the next argument as the file name
+        r_index = sys.argv.index("-r")
+        if r_index + 1 < len(sys.argv):
+            filename_to_read = sys.argv[r_index + 1]
+            try:
+                with open(filename_to_read, "r", encoding="utf-8", errors="ignore") as file:
+                    print(file.read())
+            except Exception as e:
+                print(f"Ошибка: {str(e)}")
+            sys.exit()
+
+        # Normal logic for the editor
+    if len(sys.argv) > 1 and not "-r" in sys.argv:
         filename = sys.argv[1]
     else:
         base = "new_document"
