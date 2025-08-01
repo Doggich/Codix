@@ -1,4 +1,4 @@
- # Codix Retro: Quickstart & Support Guide
+# Codix Retro: Quickstart & Support Guide
  
 **Codix** ― a lightweight, console-based text editor inspired by nano.
 Key points: minimalism, TUI via urwid, undo/redo history, search/replace, autosave, optional line numbers.

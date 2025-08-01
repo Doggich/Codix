@@ -7,7 +7,7 @@ import shutil
 import datetime
 import time
 from modules.ProjectConstraint import *
-from modules.utils import is_safe_path
+from modules.utils import is_safe_path, print_file_info
 
 
 class NanoEditor:
@@ -479,8 +479,19 @@ class NanoEditor:
 
 def main():
     """Entry point"""
+
+    # -i: read file
+    if "-i" in sys.argv and len(sys.argv) >= 3:
+        i_index = sys.argv.index("-i")
+        if i_index + 1 < len(sys.argv):
+            filename_to_info = sys.argv[i_index + 1]
+            try:
+                print_file_info(filename_to_info)
+            except Exception as e:
+                print(f"Error: {str(e)}")
+            sys.exit()
+    # -r: print the contents of the file then exit
     if "-r" in sys.argv and len(sys.argv) >= 3:
-        # We find the index -r and take the next argument as the file name
         r_index = sys.argv.index("-r")
         if r_index + 1 < len(sys.argv):
             filename_to_read = sys.argv[r_index + 1]
@@ -491,8 +502,8 @@ def main():
                 print(f"Ошибка: {str(e)}")
             sys.exit()
 
-        # Normal logic for the editor
-    if len(sys.argv) > 1 and not "-r" in sys.argv:
+    # common logic
+    if len(sys.argv) > 1 and not "-r" in sys.argv and not "-i" in sys.argv:
         filename = sys.argv[1]
     else:
         base = "new_document"
