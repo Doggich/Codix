@@ -32,7 +32,7 @@ python codix.py [filename]
 | `Ctrl + Y` | Redo                |
 | `Ctrl + G` | Help                |
 
-## Screenshots
+## Presentation
 
 ![img.png](resources/img_1.png)
 
@@ -44,6 +44,13 @@ python codix.py [filename]
 
 ![img.png](resources/img_5.png)
 
-## Video
-
 [video.mp4](resources/video.mp4)
+
+## Installation
+
+1) Open **"Environment variables"**
+2) Click on **PATH**
+3) Click on **"Create"**
+4) Write full path for **codix.exe**
+
+[video_for_installation.mp4](resources%2Fvideo_for_installation.mp4)
