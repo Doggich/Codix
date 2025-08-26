@@ -80,5 +80,5 @@ Creates a file named `new_document(N).txt`
 
 #### Happy hacking!
 
-![boy-kisser-shy.gif](resources/boy-kisser-shy.gif)
+![boy-kisser-shy.gif](https://media1.tenor.com/m/JtGXh6i-fdQAAAAC/boy-kisser-keyboard.gif)
 
