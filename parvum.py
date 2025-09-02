@@ -139,7 +139,7 @@ class NanoEditor:
         filename_display = os.path.basename(self.filename)
         if len(filename_display) > 35:
             filename_display = "..." + filename_display[-32:]
-        title = f"  Codix 0.3         {filename_display}{status}"
+        title = f"  Parvum         {filename_display}{status}"
         self.top_bar.set_text(title)
 
     def on_text_change(self, widget, new_text):
@@ -180,12 +180,12 @@ class NanoEditor:
             return False
 
         try:
-            temp_name = self.filename + ".codix_tmp"
+            temp_name = self.filename + ".parvum_tmp"
             with open(temp_name, "w", encoding="utf-8", errors="replace") as f:
                 f.write(self.text)
 
             if os.path.exists(self.filename):
-                backup_name = self.filename + ".codix_bak"
+                backup_name = self.filename + ".parvum_bak"
                 shutil.copy2(self.filename, backup_name)
 
             os.replace(temp_name, self.filename)

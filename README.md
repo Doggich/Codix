@@ -1,7 +1,7 @@
-![img.png](resources/img.png)
-# Codix Editor - Lightweight Console Text Editor for Windows
+![img.png](resources/logo.png)
+# Parvum Editor - Lightweight Console Text Editor for Windows
 
-**Codix** is a nano-inspired terminal-based text editor specifically designed for Windows environments. Built with Python and Urwid, it combines the simplicity of classic Unix editors with modern Windows-friendly features.
+**Parvum** is a nano-inspired terminal-based text editor specifically designed for Windows environments. Built with Python and Urwid, it combines the simplicity of classic Unix editors with modern Windows-friendly features.
 
 ## Key Features ✨
 - 🖥️ **Windows-native** - No WSL/Cygwin required
@@ -16,7 +16,7 @@
 
 ## Usage
 ```bash
-python codix.py [filename]
+python parvum.py [filename]
 ```
 ## Hotkeys
 

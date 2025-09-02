@@ -29,7 +29,7 @@ def is_safe_path(path):
 def print_file_info(filepath):
     print(f"\n--- File information: {filepath} ---")
     abs_path = os.path.abspath(filepath)
-    print(f"Absolute path: {abs_path}")
+    print(f"\033[1;1m\033[1;3mAbsolute path\033[0m: {abs_path}")
     print(f"Is file: {os.path.isfile(filepath)}")
     print(f"Is directory: {os.path.isdir(filepath)}")
     if not os.path.isfile(filepath):
