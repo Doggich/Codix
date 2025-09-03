@@ -30,22 +30,22 @@ def print_file_info(filepath):
     print(f"\n--- File information: {filepath} ---")
     abs_path = os.path.abspath(filepath)
     print(f"\033[1;1m\033[1;3mAbsolute path\033[0m: {abs_path}")
-    print(f"Is file: {os.path.isfile(filepath)}")
-    print(f"Is directory: {os.path.isdir(filepath)}")
+    print(f"\033[1;1m\033[1;3mIs file\033[0m: {os.path.isfile(filepath)}")
+    print(f"\033[1;1m\033[1;3mIs directory\033[0m: {os.path.isdir(filepath)}")
     if not os.path.isfile(filepath):
         return
 
     size = os.path.getsize(filepath)
-    print(f"File size: {size} bytes")
+    print(f"\033[1;1m\033[1;3mFile size\033[0m: {size} bytes")
     stat = os.stat(filepath)
-    print("Creation time:", time.ctime(stat.st_ctime))
-    print("Last modified:", time.ctime(stat.st_mtime))
-    print("Last accessed: ", time.ctime(stat.st_atime))
-    print(f"Permissions: {oct(stat.st_mode)[-3:]}")
+    print("\033[1;1m\033[1;3mCreation time\033[0m:", time.ctime(stat.st_ctime))
+    print("\033[1;1m\033[1;3mLast modified\033[0m:", time.ctime(stat.st_mtime))
+    print("\033[1;1m\033[1;3mLast accessed\033[0m: ", time.ctime(stat.st_atime))
+    print(f"\033[1;1m\033[1;3mPermissions\033[0m: {oct(stat.st_mode)[-3:]}")
 
     mime_type, encoding = mimetypes.guess_type(filepath)
-    print(f"MIME type: {mime_type}")
-    print(f"MIME encoding: {encoding}")
+    print(f"\033[1;1m\033[1;3mMIME type\033[0m: {mime_type}")
+    print(f"\033[1;1m\033[1;3mMIME encoding\033[0m: {encoding}")
 
     try:
         import chardet
@@ -63,9 +63,9 @@ def print_file_info(filepath):
         lines = content.count('\n') + 1 if content else 0
         words = len(content.split()) if content else 0
         chars = len(content)
-        print(f"Lines: {lines}")
-        print(f"Words: {words}")
-        print(f"Characters: {chars}")
+        print(f"\033[1;1m\033[1;3mLines\033[0m: {lines}")
+        print(f"\033[1;1m\033[1;3mWords\033[0m: {words}")
+        print(f"\033[1;1m\033[1;3mCharacters\033[0m: {chars}")
     except Exception as e:
         print(f"Error reading file content: {e}")
 
@@ -75,7 +75,7 @@ def print_file_info(filepath):
             h = hashlib.md5()
             for chunk in iter(lambda: f.read(4096), b""):
                 h.update(chunk)
-        print(f"MD5 hash: {h.hexdigest()}")
+        print(f"\033[1;1m\033[1;3mMD5 hash\033[0m: {h.hexdigest()}")
     except Exception as e:
         print(f"Error computing MD5: {e}")
 

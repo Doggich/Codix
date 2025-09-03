@@ -34,15 +34,14 @@ python parvum.py [filename]
 
 ## Presentation
 
+![img.png](resources/img.png)
+
 ![img.png](resources/img_1.png)
 
 ![img.png](resources/img_2.png)
 
 ![img.png](resources/img_3.png)
 
-![img.png](resources/img_4.png)
-
-![img.png](resources/img_5.png)
 
 [video.mp4](resources/video.mp4)
 
